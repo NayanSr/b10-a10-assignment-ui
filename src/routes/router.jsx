@@ -2,12 +2,12 @@ import { createBrowserRouter } from "react-router-dom";
 import HomeLayout from "../layouts/HomeLayout";
 import Registration from "../components/Registration";
 import Login from "../components/Login";
-import Home from "../assets/pages/Home";
-import AddVisa from "../assets/pages/AddVisa";
-import AllVisas from "../assets/pages/AllVisas";
-import VisaDetails from "../assets/pages/VisaDetails";
-import MyAddedVisa from "../assets/pages/MyAddedVisa";
-import MyVisaApplications from "../assets/pages/MyVisaApplications";
+import AddVisa from "../pages/AddVisa";
+import AllVisas from "../pages/AllVisas";
+import Home from "../pages/Home";
+import MyVisaApplications from "../pages/MyVisaApplications";
+import VisaDetails from "../pages/VisaDetails";
+import MyAddedVisa from "../pages/MyAddedVisa";
 
 const router= createBrowserRouter([
     {path:'/',element:<HomeLayout/>, 

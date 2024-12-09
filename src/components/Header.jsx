@@ -4,7 +4,6 @@ import { AuthContext } from "../provider/AuthProvider";
 
 const Header = () => {
 const {user}= useContext(AuthContext);
-console.log(user);
   const links = (
     <>
       <li>
