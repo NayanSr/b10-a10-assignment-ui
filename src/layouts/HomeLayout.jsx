@@ -1,11 +1,12 @@
 import { Outlet } from "react-router-dom";
-import Header from "../components/Header";
+
 import Footer from "../components/Footer";
+import Header from "../components/Header";
 
 const HomeLayout = () => {
     return (
         <div className="box-border flex flex-col min-h-screen container mx-auto">
-           <Header/>
+         <Header/>
            <div className="flex-grow">
             <Outlet/>
            </div>
