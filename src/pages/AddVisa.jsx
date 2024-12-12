@@ -1,6 +1,11 @@
 /* eslint-disable react/no-unescaped-entities */
 
+import { useContext } from "react";
+import { AuthContext } from "../provider/AuthProvider";
+
 const AddVisa = () => {
+const {user}= useContext(AuthContext)
+
   const handleAddVisaSubmit = (e) => {
     e.preventDefault();
     const form = e.target;
@@ -21,8 +26,17 @@ const AddVisa = () => {
     const fee = form.fee.value;
     const validity = form.validity.value;
     const applicationMethod = formData.get("applicationMethod");
-    const visaData= {countryName,countryImage,visaType, processingTime,requiredDocs, description, ageRestriction, fee, validity,applicationMethod}
+    const createdBy= user?.email
+    const visaData= {countryName,countryImage,visaType, processingTime,requiredDocs, description, ageRestriction, fee, validity,applicationMethod, createdBy}
     console.log(visaData);
+
+    fetch('http://localhost:5000/addVisa',{
+      method:'POST',
+      headers:{'content-type':'application/json'},
+      body: JSON.stringify(visaData)
+    })
+    .then(res=>res.json())
+    .then(data=>console.log(data))
   };
 
   return (
@@ -94,13 +108,13 @@ const AddVisa = () => {
           <label className="block text-gray-700 font-medium mb-2">
             Required Documents
           </label>
-          <input type="checkbox" name="requiredDoc" value="Passport" />
+          <input type="checkbox" name="requiredDoc" value=" Valid passport" />
           <label htmlFor="vehicle1"> Valid passport</label>
           <br />
-          <input type="checkbox" name="requiredDoc" value="Application" />{" "}
+          <input type="checkbox" name="requiredDoc" value="Visa application form" />{" "}
           <label htmlFor="vehicle2"> Visa application form</label>
           <br />
-          <input type="checkbox" name="requiredDoc" value="RecentPhoto" />
+          <input type="checkbox" name="requiredDoc" value="Recent passport-sized photograph" />
           <label htmlFor="vehicle3"> Recent passport-sized photograph</label>
         </div>
 
