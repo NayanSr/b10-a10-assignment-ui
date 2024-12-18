@@ -16,7 +16,7 @@ const {user}= useContext(AuthContext);
         <Link to="/addVisa">Add Visa</Link>
       </li>
       <li className="md:mx-2">
-        <Link to="/myAdded">My Added Visas</Link>
+        <Link to={`/myAdded/${user?.email}`}>My Added Visas</Link>
       </li>
       <li>
         <Link to="/myApplications">My Visa Applications</Link>

@@ -13,9 +13,10 @@ const router= createBrowserRouter([
     {path:'/',element:<HomeLayout/>, 
         children:[
             {path:'/', element:<Home/>},
-            {path:'/allVisas', element:<AllVisas/>},
+            {path:'/allVisas', element:<AllVisas/>, loader:()=>fetch('http://localhost:5000/allVisa')},
             {path:'/addVisa', element:<AddVisa/>},
-            {path:'/myAdded', element:<MyAddedVisa/>},
+            {path:'/myAdded/:email', element:<MyAddedVisa/>,
+                loader:({params})=>fetch(`http://localhost:5000/myAdded/${params.email}`)},
             {path:'/visaDetails/:id', element:<VisaDetails/>},
             {path:'/myApplications', element:<MyVisaApplications/>},
             {path:'/register', element:<Registration/>},
