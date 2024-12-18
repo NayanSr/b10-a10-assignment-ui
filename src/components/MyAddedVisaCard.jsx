@@ -1,9 +1,25 @@
 /* eslint-disable react/prop-types */
 
-const MyAddedVisaCard = ({visa}) => {
-    const {_id,countryName,countryImage,visaType,processingTime,fee,validity,applicationMethod}= visa;
+
+const MyAddedVisaCard = ({singleVisa,myAllVisa,setMyAllVisa}) => {
+    const {_id,countryName,countryImage,visaType,processingTime,fee,validity,applicationMethod}= singleVisa;
     const handleDelete=id=>{
         console.log(id);
+        console.log(myAllVisa);
+        fetch(`http://localhost:5000/allVisa/${id}`,{
+            method:'DELETE'
+        })
+        .then(res=>res.json())
+        .then(data=>{
+            if(data.deletedCount){
+                alert('deleted successfully');
+                console.log(singleVisa);
+                const rest = myAllVisa.filter(visa=> visa._id!=id);
+                setMyAllVisa(rest);
+               
+            }
+        }
+        )
     }
     
     return (
