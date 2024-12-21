@@ -5,6 +5,13 @@ const MyVisaApplications = () => {
   console.log(data);
 const handleCancel=id=>{
     console.log(id);
+    fetch(`http://localhost:5000/myApplied/${id}`,{
+        method:'DELETE'
+    })
+    .then(res=>res.json())
+    .then(data=>{console.log(data)
+        if(data?.deletedCount){alert('Visa Deleted')}
+    })
 }
   return (
     <div>
