@@ -7,7 +7,7 @@ const AllVisas = () => {
 
     return (
         <div>
-           <div className="grid md:grid-cols-3 lg:grid-cols-4 gap-4">
+           <div className="grid md:grid-cols-3 lg:grid-cols-4 gap-4 my-4">
            {
             loadedVisas.map(visa=><VisaCard key={visa._id} visa={visa}></VisaCard>)
            }
