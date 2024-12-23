@@ -1,7 +1,7 @@
 # Project Name: E Visa
 
-# Live Link (client): [Hindi vocabulary learning](https://b10a10-e-visa.web.app/)
-# Live Link (server): [Hindi vocabulary learning](https://b10a10-server-eight.vercel.app/)
+# Live Link (client): [E Visa](https://b10a10-e-visa.web.app/)
+# Live Link (server): [E Visa](https://b10a10-server-eight.vercel.app/)
 
 ## Description
 This site is for Visa publication & application site. Here a person can post visa and apply for a visa
