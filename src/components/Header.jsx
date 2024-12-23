@@ -3,13 +3,16 @@ import { Link } from "react-router-dom";
 import { AuthContext } from "../provider/AuthProvider";
 
 const Header = () => {
-const {user, handleSignout}= useContext(AuthContext);
+const {user,setLoading, handleSignout}= useContext(AuthContext);
 
 /* const handleGoogleLoginBtn=()=>{
 handleGoogleLogin()
 } */
 const handleLogout=()=>{
   handleSignout()
+  .then(res=>{
+    setLoading(false)
+  })
 }
   const links = (
     <>

@@ -31,7 +31,7 @@ const Banner = () => {
             Check Requirements
           </button>
         </div>
-<button >GoogleLogin</button>
+
        
       </div>
     </div>

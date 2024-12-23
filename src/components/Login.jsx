@@ -4,12 +4,14 @@ import { AuthContext } from "../provider/AuthProvider";
 
 const Login = () => {
 
-  const {handleGoogleLogin, handleEmailLogin}= useContext(AuthContext);
+  const {setLoading,handleGoogleLogin, handleEmailLogin}= useContext(AuthContext);
 
   const handleGoogleLoginBtn=()=>{
   handleGoogleLogin()
-  .then(()=>{
-    navigate('/')
+  .then(res=>{
+    navigate( '/' )
+    console.log(location)
+    setLoading(false)
   })
   }
 const navigate= useNavigate();
@@ -22,7 +24,10 @@ const navigate= useNavigate();
         const user= {email, password};
         handleEmailLogin(email, password)
         .then(result=>{
-          navigate('/')
+          // navigate(location.state.from || '/' )
+          navigate('/' )
+          setLoading(false)
+          
         })
         console.log(user);
     }

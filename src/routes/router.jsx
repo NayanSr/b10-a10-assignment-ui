@@ -10,13 +10,16 @@ import VisaDetails from "../pages/VisaDetails";
 import MyAddedVisa from "../pages/MyAddedVisa";
 import UpdateVisa from "../components/UpdateVisa";
 import PrivateRoute from "../components/PrivateRoute";
+import Error from "../components/Error";
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <HomeLayout />,
     children: [
-      { path: "/", element: <Home /> },
+      { path: "/", element: <Home />,
+        loader: ()=>fetch('http://localhost:5000/latestVisa')
+       },
       {
         path: "/allVisas",
         element: <AllVisas />,
@@ -58,8 +61,10 @@ const router = createBrowserRouter([
       },
       { path: "/register", element: <Registration /> },
       { path: "/login", element: <Login /> },
+     
     ],
   },
+  {path:'*', element:<Error/>}
 ]);
 
 export default router;

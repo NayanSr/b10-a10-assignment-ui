@@ -22,12 +22,14 @@ const AuthProvider = ({ children }) => {
 
   const handleEmailRegitration = (email, password) => {
     //! Email Registration
+    
     return createUserWithEmailAndPassword(auth, email, password);
   };
 
   const handleEmailLogin = (email, password) => {
     //! Email Login
     return signInWithEmailAndPassword(auth, email, password);
+   
   };
 
   const handleGoogleLogin = () => {
@@ -46,12 +48,13 @@ const AuthProvider = ({ children }) => {
 
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
-      console.log(currentUser);
+    //   console.log(currentUser);
       if (currentUser) {
         setUser(currentUser);
         setLoading(false)
       } else {
         setUser(null);
+        setLoading(false)
       }
     });
     return () => {
@@ -62,6 +65,7 @@ const AuthProvider = ({ children }) => {
   const authInfo = {
     user,
     loading,
+    setLoading,
     handleEmailRegitration,
     handleGoogleLogin,
     handleSignout,

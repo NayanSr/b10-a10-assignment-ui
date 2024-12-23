@@ -28,7 +28,7 @@ const {user}= useContext(AuthContext)
     const applicationMethod = formData.get("applicationMethod");
     const createdBy= user?.email
     const visaData= {countryName,countryImage,visaType, processingTime,requiredDocs, description, ageRestriction, fee, validity,applicationMethod, createdBy}
-    console.log(visaData);
+    // console.log(visaData);
 
     fetch('http://localhost:5000/addVisa',{
       method:'POST',
@@ -36,7 +36,10 @@ const {user}= useContext(AuthContext)
       body: JSON.stringify(visaData)
     })
     .then(res=>res.json())
-    .then(data=>console.log(data))
+    .then(data=>{
+      form.reset();
+      alert('Visa added Subbessfully')
+    })
   };
 
   return (
