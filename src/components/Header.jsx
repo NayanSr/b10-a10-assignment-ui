@@ -3,7 +3,14 @@ import { Link } from "react-router-dom";
 import { AuthContext } from "../provider/AuthProvider";
 
 const Header = () => {
-const {user}= useContext(AuthContext);
+const {user, handleSignout}= useContext(AuthContext);
+
+/* const handleGoogleLoginBtn=()=>{
+handleGoogleLogin()
+} */
+const handleLogout=()=>{
+  handleSignout()
+}
   const links = (
     <>
       <li>
@@ -26,7 +33,6 @@ const {user}= useContext(AuthContext);
 
   return (
     <div className="navbar bg-slate-100">
-      <h2>User:{user.name}</h2>
       <div className="navbar-start">
         <div className="dropdown">
           <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -65,12 +71,19 @@ const {user}= useContext(AuthContext);
         </ul>
       </div>
       <div className="navbar-end mr-4 text-xl text-yellow-600">
-        {user?.name ? (
-          <Link className=" font-semibold">Logout</Link>
+        {user ? (
+        <div className="flex items-center">
+            <img className="w-8 h-8 rounded-full mr-4" src={user?.photoURL} alt={user?.displayName} />
+            {/* <p>{user?.displayName}</p> */}
+            <button onClick={handleLogout} className="btn btn-success text-xl text-white">Logout</button>
+        </div>
+        
         ) : (
-          <Link className="text-lg font-semibold" to="/login">
+        
+           <Link className="text-lg font-semibold" to="/login">
             Login
           </Link>
+        
         )}
 
         <Link className="ml-4  font-semibold" to="/register">

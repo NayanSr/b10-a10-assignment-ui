@@ -1,12 +1,22 @@
+import { useContext } from "react";
 import { Link } from "react-router-dom";
+import { AuthContext } from "../provider/AuthProvider";
 
 const Login = () => {
+
+  const {handleGoogleLogin, handleEmailLogin}= useContext(AuthContext);
+
+  const handleGoogleLoginBtn=()=>{
+  handleGoogleLogin()
+  }
+
     const handleLogin=e=>{
         e.preventDefault();
         const form= e.target;
         const email = form.email.value;
         const password= form.password.value;
         const user= {email, password};
+        handleEmailLogin(email, password)
         console.log(user);
     }
 
@@ -55,6 +65,7 @@ const Login = () => {
           <br />
           <button
             type="button"
+            onClick={handleGoogleLoginBtn}
             className=" box-border flex items-center justify-center bg-white text-lg text-black border-2 border-teal-500 py-2 px-4 rounded-2xl mx-8 mb-6"
           >
             <span className="mr-8 w-6 h-6 "><img src="https://img.icons8.com/?size=100&id=V5cGWnc9R4xj&format=png&color=000000" alt="" /></span> Sign in with Google

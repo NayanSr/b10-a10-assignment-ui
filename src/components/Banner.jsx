@@ -1,5 +1,15 @@
+import { useContext } from "react";
+import { AuthContext } from "../provider/AuthProvider";
 
 const Banner = () => {
+
+  const {handleGoogleLogin} = useContext(AuthContext);
+  const hhhh=()=>{
+    handleGoogleLogin()
+    .then(res=>{
+      console.log(res);
+    })
+  }
     return (
         <div className=" bg-green-400 text-white">
 
@@ -22,7 +32,7 @@ const Banner = () => {
             Check Requirements
           </button>
         </div>
-
+<button onClick={hhhh}>GoogleLogin</button>
        
       </div>
     </div>
