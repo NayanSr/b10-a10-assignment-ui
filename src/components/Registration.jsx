@@ -1,10 +1,11 @@
 import { useContext } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "../provider/AuthProvider";
 
 const Registration = () => {
 
   const {handleEmailRegitration, manageProfile}= useContext(AuthContext);
+  const navigate= useNavigate();
 
     const handleRegisterSubmit=(e)=>{
         e.preventDefault();
@@ -16,11 +17,14 @@ const Registration = () => {
 
         handleEmailRegitration(email, password)
         .then(res=>{
-          manageProfile(name,photo)
+          manageProfile(name,photo);
+          form.reset();
+          alert('Registered Successfully');
+          navigate('/')
         })
 
-        const user={name,email,photo,password};
-        console.log(user);
+        // const user={name,email,photo,password};
+        // console.log(user);
 
     }
 

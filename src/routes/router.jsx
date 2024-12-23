@@ -18,12 +18,13 @@ const router = createBrowserRouter([
     element: <HomeLayout />,
     children: [
       { path: "/", element: <Home />,
-        loader: ()=>fetch('http://localhost:5000/latestVisa')
+        // loader: ()=>fetch('http://localhost:5000/latestVisa')
+        loader: ()=>fetch('https://b10a10-server-eight.vercel.app/latestVisa')
        },
       {
         path: "/allVisas",
         element: <AllVisas />,
-        loader: () => fetch("http://localhost:5000/allVisa"),
+        loader: () => fetch("https://b10a10-server-eight.vercel.app/allVisa"),
       },
       { path: "/addVisa", element: <AddVisa /> },
       {
@@ -32,7 +33,7 @@ const router = createBrowserRouter([
             <MyAddedVisa />
         </PrivateRoute>,
         loader: ({ params }) =>
-          fetch(`http://localhost:5000/myAdded/${params.email}`),
+          fetch(`https://b10a10-server-eight.vercel.app/myAdded/${params.email}`),
       },
       {
         path: "/visaDetails/:id",
@@ -42,13 +43,13 @@ const router = createBrowserRouter([
           </PrivateRoute>
         ),
         loader: ({ params }) =>
-          fetch(`http://localhost:5000/allVisa/${params.id}`),
+          fetch(`https://b10a10-server-eight.vercel.app/allVisa/${params.id}`),
       },
       {
         path: "/updateVisa/:id",
         element: <UpdateVisa />,
         loader: ({ params }) =>
-          fetch(`http://localhost:5000/allVisa/${params.id}`),
+          fetch(`https://b10a10-server-eight.vercel.app/${params.id}`),
       },
 
       {
@@ -57,7 +58,7 @@ const router = createBrowserRouter([
             <MyVisaApplications />
         </PrivateRoute>,
         loader: ({ params }) =>
-          fetch(`http://localhost:5000/myApplied/${params.email}`),
+          fetch(`https://b10a10-server-eight.vercel.app/myApplied/${params.email}`),
       },
       { path: "/register", element: <Registration /> },
       { path: "/login", element: <Login /> },

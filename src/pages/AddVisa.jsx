@@ -30,7 +30,7 @@ const {user}= useContext(AuthContext)
     const visaData= {countryName,countryImage,visaType, processingTime,requiredDocs, description, ageRestriction, fee, validity,applicationMethod, createdBy}
     // console.log(visaData);
 
-    fetch('http://localhost:5000/addVisa',{
+    fetch('https://b10a10-server-eight.vercel.app/addVisa',{
       method:'POST',
       headers:{'content-type':'application/json'},
       body: JSON.stringify(visaData)

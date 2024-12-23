@@ -4,12 +4,13 @@ const MyVisaApplications = () => {
   const data = useLoaderData();
   // console.log(data);
 const handleCancel=id=>{
-    console.log(id);
-    fetch(`http://localhost:5000/myApplied/${id}`,{
+    // console.log(id);
+    fetch(`https://b10a10-server-eight.vercel.app/${id}`,{
         method:'DELETE'
     })
     .then(res=>res.json())
-    .then(data=>{console.log(data)
+    .then(data=>{
+      // console.log(data)
         if(data?.deletedCount){alert('Visa Deleted')}
     })
 }

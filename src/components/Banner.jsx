@@ -6,7 +6,7 @@ const Banner = () => {
   const hhhh=()=>{
     handleGoogleLogin()
     .then(res=>{
-      console.log(res);
+      // console.log(res);
     })
   } */
     return (

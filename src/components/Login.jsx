@@ -10,7 +10,7 @@ const Login = () => {
   handleGoogleLogin()
   .then(res=>{
     navigate( '/' )
-    console.log(location)
+    // console.log(location)
     setLoading(false)
   })
   }
@@ -29,7 +29,7 @@ const navigate= useNavigate();
           setLoading(false)
           
         })
-        console.log(user);
+        // console.log(user);
     }
 
   return (

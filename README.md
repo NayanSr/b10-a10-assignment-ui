@@ -1,16 +1,21 @@
-# Project Name: Lingo Bingo
+# Project Name: E Visa
 
-# Live Link: [Hindi vocabulary learning](https://assignment-nine-b-ten.web.app/)
+# Live Link (client): [Hindi vocabulary learning](https://b10a10-e-visa.web.app/)
+# Live Link (server): [Hindi vocabulary learning](https://b10a10-server-eight.vercel.app/)
 
 ## Description
-This site is for learning new Hindi words
+This site is for Visa publication & application site. Here a person can post visa and apply for a visa
 ## Technologies Used
-- Tailwind
-- DaisyUI
-- JavaScript
 - React
 - React Router
+- Firebase
+- Tailwind
+- DaisyUI
 - Context
+- MongoDB
+- Express
+- Protected environment variable
+
 
 ## Key Features
 1. **Route**: Can go to different route by clicking link.

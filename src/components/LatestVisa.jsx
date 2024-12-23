@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 
 const LatestVisa = ({ data }) => {
-  console.log(data);
+  // console.log(data);
   return (
     <div className="mb-4">
       <div className="grid md:grid-cols-3 lg:grid-cols-4 gap-4 my-4">

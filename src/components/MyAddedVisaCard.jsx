@@ -20,16 +20,16 @@ const MyAddedVisaCard = ({ singleVisa, myAllVisa, setMyAllVisa }) => {
 
 
   const handleDelete = (id) => {
-    console.log(id);
-    console.log(myAllVisa);
-    fetch(`http://localhost:5000/allVisa/${id}`, {
+    // console.log(id);
+    // console.log(myAllVisa);
+    fetch(`https://b10a10-server-eight.vercel.app/${id}`, {
       method: "DELETE",
     })
       .then((res) => res.json())
       .then((data) => {
         if (data.deletedCount) {
           alert("deleted successfully");
-          console.log(singleVisa);
+          // console.log(singleVisa);
           const rest = myAllVisa.filter((visa) => visa._id != id);
           setMyAllVisa(rest);
         }
@@ -41,8 +41,8 @@ const MyAddedVisaCard = ({ singleVisa, myAllVisa, setMyAllVisa }) => {
 const[item,setItem]= useState(null)
   const handleModalShow=async id=>{
     setItem(id)
-    console.log('id from param',id);
-    console.log('id from state',item);
+    // console.log('id from param',id);
+    // console.log('id from state',item);
  
    await document.getElementById("my_modal_5").showModal();
   } */

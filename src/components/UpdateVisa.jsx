@@ -6,7 +6,7 @@ const UpdateVisa = () => {
     const visa= useLoaderData();
     const user= useContext(AuthContext);
     const {countryImage,countryName,description,applicationMethod,visaType,processingTime,ageRestriction,fee,validity}= visa;
-    console.log(visa);
+    // console.log(visa);
 
     const handleUpdate = (e) => {
         e.preventDefault();
@@ -30,9 +30,9 @@ const UpdateVisa = () => {
         const applicationMethod = formData.get("applicationMethod");
         const createdBy= user?.email
         const updatedVisaData= {countryName,countryImage,visaType, processingTime,requiredDocs, description, ageRestriction, fee, validity,applicationMethod, createdBy}
-        console.log(updatedVisaData);
+        // console.log(updatedVisaData);
     
-        fetch(`http://localhost:5000/allVisa/${visa._id}`,{
+        fetch(`https://b10a10-server-eight.vercel.app/${visa._id}`,{
             method:'PUT',
             headers: {
               'Content-Type': 'application/json',
@@ -41,7 +41,9 @@ const UpdateVisa = () => {
            
         })
         .then(res=>res.json())
-        .then(data=>console.log(data))
+        .then(data=>{
+          
+        })
     
     
         // document.getElementById('btnModalClose').click();

@@ -4,7 +4,7 @@ import { AuthContext } from "../provider/AuthProvider";
 // eslint-disable-next-line react/prop-types
 const Modal = ({id}) => {
   const {user}= useContext(AuthContext)
-console.log(id);
+// console.log(id);
   const handleUpdate = (e) => {
     e.preventDefault();
     const form = e.target;
@@ -27,15 +27,17 @@ console.log(id);
     const applicationMethod = formData.get("applicationMethod");
     const createdBy= user?.email
     const updatedVisaData= {countryName,countryImage,visaType, processingTime,requiredDocs, description, ageRestriction, fee, validity,applicationMethod, createdBy}
-    console.log(updatedVisaData);
+    // console.log(updatedVisaData);
 
-    fetch(`http://localhost:5000/allVisa/${id}`,{
+    fetch(`https://b10a10-server-eight.vercel.app/${id}`,{
         method:'PUT',
         headers:{'content-type':'application/json'},
        
     })
     .then(res=>res.json())
-    .then(data=>console.log(data))
+    .then(data=>{
+      
+    })
 
 
     document.getElementById('btnModalClose').click();
