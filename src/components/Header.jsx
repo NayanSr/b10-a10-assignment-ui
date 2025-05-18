@@ -35,7 +35,9 @@ const handleLogout=()=>{
   );
 
   return (
-    <div className="navbar bg-slate-100">
+<div className=" w-full bg-primary sticky top-0 z-50">
+
+    <div className="navbar  text-white md:font-semibold max-w-[1400px] mx-auto ">
       <div className="navbar-start">
         <div className="dropdown">
           <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -63,7 +65,7 @@ const handleLogout=()=>{
         </div>
         <Link
           to="/"
-          className="btn btn-ghost text-orange-500 text-2xl font-bold italic"
+          className="btn text-3xl btn-ghost text-orange-500  font-bold italic"
         >
           E. Visa
         </Link>
@@ -83,16 +85,17 @@ const handleLogout=()=>{
         
         ) : (
         
-           <Link className="text-lg font-semibold" to="/login">
+           <Link className="text-xl font-semibold text-teal-300 px-2 py-1 rounded-lg bg-orange-500" to="/login">
             Login
           </Link>
         
         )}
 
-        <Link className="ml-4  font-semibold" to="/register">
+        <Link className="text-xl ml-4  font-semibold text-teal-300 px-2 py-1 rounded-lg bg-orange-500" to="/register">
           Register
         </Link>
       </div>
+    </div>
     </div>
   );
 };

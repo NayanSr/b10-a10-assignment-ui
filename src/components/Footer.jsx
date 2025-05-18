@@ -2,7 +2,9 @@ import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
-    <footer className="footer text-white items-center p-10 bg-slate-700">
+<div className="bg-slate-700 w-full pt-4">
+
+    <footer className="footer text-white items-center  max-w-[1400px] mx-auto">
       <nav>
         <h6 className="footer-title">Services</h6>
         <Link className="link link-hover">Branding</Link>
@@ -56,6 +58,8 @@ const Footer = () => {
         </div>
       </nav>
     </footer>
+
+    </div>
   );
 };
 

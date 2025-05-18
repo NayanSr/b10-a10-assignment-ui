@@ -5,12 +5,14 @@ import Header from "../components/Header";
 
 const HomeLayout = () => {
     return (
-        <div className="box-border flex flex-col min-h-screen container mx-auto">
+        <div className=" flex flex-col min-h-screen  mx-auto">
          <Header/>
-           <div className="flex-grow">
+           <div className="flex-grow lg:w-[1400px] mx-auto bg-slate-400">
             <Outlet/>
            </div>
-           <Footer/>
+           <div className="">
+            <Footer />
+           </div>
         </div>
     );
 };

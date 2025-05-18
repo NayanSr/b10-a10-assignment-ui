@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 const LatestVisa = ({ data }) => {
   // console.log(data);
   return (
-    <div className="mb-4">
+    <div className="mb-4 max-w-[1400px]">
       <div className="grid md:grid-cols-3 lg:grid-cols-4 gap-4 my-4">
         {data.map((dt, idx) => (
           <div className="card card-compact bg-base-100  shadow-xl" key={idx}>

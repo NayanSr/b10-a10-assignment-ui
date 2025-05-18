@@ -7,10 +7,14 @@ import { useLoaderData } from "react-router-dom";
 const Home = () => {
     const loadedData= useLoaderData()
     return (
-        <div>
+        <div className="">
           
            <Banner/>
-           <LatestVisa data={loadedData}/>
+           <div className='px-4'
+           >
+            
+           <LatestVisa  data={loadedData}/>
+           </div>
            {/* <br />
            <ExtraSection1/>
            <br />
