@@ -49,7 +49,7 @@ const[item,setItem]= useState(null)
 
  
   return (
-    <div className="card card-compact  shadow-xl">
+    <div className="card card-compact  shadow-xl bg-white">
       <figure>
         <img src={countryImage} alt={countryName} />
       </figure>

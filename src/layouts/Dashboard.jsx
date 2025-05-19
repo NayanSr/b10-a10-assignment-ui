@@ -8,13 +8,19 @@ const Dashboard = () => {
   
   return (
     <div className="flex max-w-[1400px] mx-auto">
-      <div className="w-72 bg-teal-500 h-full mr-4">
+      <div className="w-72 bg-orange-500 h-screen mr-4">
         <ul className="menu">
           <li className='text-white text-lg'>
             <NavLink to="profile">My Profile</NavLink>
           </li>
           <li className='text-white text-lg'>
-            <NavLink to="link1">My Orders</NavLink>
+            <NavLink to="addVisa">Add Visa</NavLink>
+          </li>
+          <li className='text-white text-lg'>
+            <NavLink to={`myAdded/${user?.email}`}>My Added Visa</NavLink>
+          </li>
+          <li className='text-white text-lg'>
+            <NavLink to={`myApplications/${user?.email}`}>My Applied Visa</NavLink>
           </li>
           <div className= "border-2 border-t-orange-900"></div>
           <li className='text-white text-xl'>

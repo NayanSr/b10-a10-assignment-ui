@@ -30,7 +30,7 @@ const router = createBrowserRouter([
         element: <AllVisas />,
         loader: () => fetch("https://b10a10-server-eight.vercel.app/allVisa"),
       },
-      { path: "/addVisa", element: <AddVisa /> },
+      { path: "/addVisa", element: <PrivateRoute><AddVisa /></PrivateRoute> },
       { path: "/requirements", element: <Requirements/> },
       {
         path: "/myAdded/:email",
@@ -74,8 +74,30 @@ const router = createBrowserRouter([
     path:"dashboard",
     element:<Dashboard/>,
     children:[
-      {path:"cart", element:<Cart/>},
+      {path:"addVisa", element:<PrivateRoute><AddVisa /></PrivateRoute>},
       {path:"profile", element: <Profile/>},
+      {path: "myAdded/:email",
+        element: <PrivateRoute>
+            <MyAddedVisa />
+        </PrivateRoute>,
+        loader: ({ params }) =>
+          fetch(`https://b10a10-server-eight.vercel.app/myAdded/${params.email}`)},
+        {
+        path: "myAdded/:email",
+        element: <PrivateRoute>
+            <MyAddedVisa />
+        </PrivateRoute>,
+        loader: ({ params }) =>
+          fetch(`https://b10a10-server-eight.vercel.app/myAdded/${params.email}`),
+      },
+      {
+        path: "myApplications/:email",
+        element: <PrivateRoute>
+            <MyVisaApplications />
+        </PrivateRoute>,
+        loader: ({ params }) =>
+          fetch(`https://b10a10-server-eight.vercel.app/myApplied/${params.email}`),
+      },
     ]
   },
 

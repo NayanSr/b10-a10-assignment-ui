@@ -80,7 +80,7 @@ const handleLogout=()=>{
         <div className="flex items-center ">
             <img className="w-8 h-8 rounded-full mr-4" src={user?.photoURL} alt={user?.displayName} />
             {/* <p>{user?.displayName}</p> */}
-            <button onClick={handleLogout} className="btn btn-sm btn-success text-xl text-white ">Logout</button>
+            <button onClick={handleLogout} className="btn btn-sm bg-orange-500 text-xl text-white ">Logout</button>
         </div>
         
         ) : (
@@ -94,7 +94,7 @@ const handleLogout=()=>{
         <Link className="text-xl ml-4  font-semibold text-teal-300 px-2 py-[1.5px] rounded-lg bg-orange-500" to="/register">
           Register
         </Link>
-        <Link className="text-xl ml-4  font-semibold text-teal-300 px-2 py-[1.5px] rounded-lg bg-orange-500" to="/dashboard/cart">
+        <Link className="text-xl ml-4  font-semibold text-teal-300 px-2 py-[1.5px] rounded-lg bg-orange-500" to="/dashboard">
           Dashboard
         </Link>
       </div>
