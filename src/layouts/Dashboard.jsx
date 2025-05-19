@@ -1,12 +1,20 @@
+import { useContext } from "react";
 import { NavLink, Outlet } from "react-router-dom";
+import { AuthContext } from "../provider/AuthProvider";
 
 const Dashboard = () => {
+  const {user}= useContext(AuthContext);
+  console.log(user?.email);
+  
   return (
     <div className="flex max-w-[1400px] mx-auto">
       <div className="w-72 bg-teal-500 h-full mr-4">
         <ul className="menu">
           <li className='text-white text-lg'>
-            <NavLink to="dashboard/link1">My Orders</NavLink>
+            <NavLink to="profile">My Profile</NavLink>
+          </li>
+          <li className='text-white text-lg'>
+            <NavLink to="link1">My Orders</NavLink>
           </li>
           <div className= "border-2 border-t-orange-900"></div>
           <li className='text-white text-xl'>

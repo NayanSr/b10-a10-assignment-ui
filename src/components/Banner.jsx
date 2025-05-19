@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 
 
 const Banner = () => {
@@ -24,11 +25,11 @@ const Banner = () => {
 
     
         <div className="mt-6 flex justify-center space-x-4">
-          <button className="bg-transparent border border-white text-white font-semibold py-3 px-6 rounded-lg shadow-md hover:bg-white hover:text-blue-600 transition">
-            Add Visa
+          <button className="bg-blue-600 border border-white text-white font-semibold py-3 px-6 rounded-lg shadow-md hover:bg-white hover:text-blue-600 transition">
+           <Link to='/allVisas'> Add Visa</Link>
           </button>
-          <button className="bg-transparent border border-white text-white font-semibold py-3 px-6 rounded-lg shadow-md hover:bg-white hover:text-blue-600 transition">
-            Check Requirements
+          <button className="bg-blue-600 border border-white text-white font-semibold py-3 px-6 rounded-lg shadow-md hover:bg-white hover:text-blue-600 transition">
+            <Link to='/requirements'>Check Requirements</Link>
           </button>
         </div>
 

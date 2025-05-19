@@ -20,7 +20,7 @@ const LatestVisa = ({ data }) => {
               <p>Visa Type : {dt.visaType}</p>
               <p>Visa Fee : {dt.fee}</p>
               <div className="card-actions justify-end mt-4">
-                <button className="btn btn-primary">
+                <button className="btn bg-blue-600 text-lg text-white hover:text-black">
                   <Link to={`/visaDetails/${dt._id}`}>view details</Link>
                 </button>
               </div>
@@ -29,7 +29,7 @@ const LatestVisa = ({ data }) => {
         ))}
       </div>
 
-     <button className="btn bg-teal-700 mx-auto block h-12 text-white sm:btn-sm md:btn-md lg:btn-lg"> <Link to='/allVisas'>See All Visa</Link></button>
+     <button className="btn bg-blue-600 mx-auto block h-12 text-white sm:btn-sm md:btn-md lg:btn-lg"> <Link to='/allVisas'>See All Visa</Link></button>
     
     </div>
   );

@@ -13,6 +13,8 @@ import PrivateRoute from "../components/PrivateRoute";
 import Error from "../components/Error";
 import Dashboard from "../layouts/Dashboard";
 import Cart from "../pages/Dashboard/Cart";
+import Profile from "../pages/Profile";
+import Requirements from "../pages/Requirements";
 
 const router = createBrowserRouter([
   {
@@ -29,6 +31,7 @@ const router = createBrowserRouter([
         loader: () => fetch("https://b10a10-server-eight.vercel.app/allVisa"),
       },
       { path: "/addVisa", element: <AddVisa /> },
+      { path: "/requirements", element: <Requirements/> },
       {
         path: "/myAdded/:email",
         element: <PrivateRoute>
@@ -71,7 +74,8 @@ const router = createBrowserRouter([
     path:"dashboard",
     element:<Dashboard/>,
     children:[
-      {path:"cart", element:<Cart/>}
+      {path:"cart", element:<Cart/>},
+      {path:"profile", element: <Profile/>},
     ]
   },
 

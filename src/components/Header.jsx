@@ -75,7 +75,7 @@ const handleLogout=()=>{
           {links}
         </ul>
       </div>
-      <div className="navbar-end mr-4 text-xl text-yellow-600 mr-2">
+      <div className="navbar-end mr-4 text-xl text-yellow-600 ">
         {user ? (
         <div className="flex items-center ">
             <img className="w-8 h-8 rounded-full mr-4" src={user?.photoURL} alt={user?.displayName} />

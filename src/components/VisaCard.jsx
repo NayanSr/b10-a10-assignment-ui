@@ -19,7 +19,7 @@ const VisaCard = ({ visa }) => {
         <p>Visa Type : {visaType}</p>
         <p>Visa Fee : {fee}</p>
         <div className="card-actions justify-end mt-4">
-          <button className="btn btn-primary">
+          <button className="btn bg-blue-600 text-white text-lg">
             <Link to={`/visaDetails/${_id}`}>view details</Link>
           </button>
         </div>
