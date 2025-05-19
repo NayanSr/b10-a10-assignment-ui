@@ -7,7 +7,7 @@ const MyAddedVisa = () => {
   const [myAllVisa, setMyAllVisa]= useState(myVisa)
   // console.log(myVisa);
   return (
-    <div className="px-4">
+    <div className="px-4 my-6">
       <h2 className="text-4xl text-center">My added Visa : {myAllVisa?.length}</h2>{" "}
       <br />
 

@@ -11,7 +11,7 @@ const Banner = () => {
     })
   } */
     return (
-        <div className="w-full bg-green-400 text-white">
+        <div className=" bg-green-400 text-white">
 
 
  

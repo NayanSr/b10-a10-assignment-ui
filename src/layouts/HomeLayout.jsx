@@ -7,7 +7,7 @@ const HomeLayout = () => {
     return (
         <div className=" flex flex-col min-h-screen  mx-auto">
          <Header/>
-           <div className="flex-grow lg:w-[1400px] mx-auto bg-slate-400">
+           <div className="flex-grow  mx-auto bg-slate-400 dark:bg-gray-700 dark:text-white">
             <Outlet/>
            </div>
            <div className="">

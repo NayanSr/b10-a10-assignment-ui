@@ -15,18 +15,18 @@ const handleCancel=id=>{
     })
 }
   return (
-    <div className="px-4">
-      <h2>Total Applied: {data?.length}</h2>
+    <div className="px-4 my-6">
+      <h2 className="text-2xl font-semibold">Total Applied: {data?.length}</h2>
       <div className="grid grid-cols-1 md:grid-cols-3 my-4">
         {data.map((dt) => (
-          <div key={dt._id} className="card bg-base-100 w-96 shadow-xl">
+          <div key={dt._id} className="card bg-base-100 w-96 shadow-xl border-2 border-gray-100">
             <figure>
               <img
                 src={dt.countryImage}
                 alt={dt.countryName}
               />
             </figure>
-            <div className="card-body">
+            <div className="card-body dark:bg-gray-700 dark:text-white">
               <h2 className="card-title">{dt.countryName}</h2>
               
               <p>{dt.visaType}</p>

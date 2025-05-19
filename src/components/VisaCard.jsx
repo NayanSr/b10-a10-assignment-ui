@@ -5,7 +5,7 @@ const VisaCard = ({ visa }) => {
   // eslint-disable-next-line react/prop-types
   const { fee, visaType, countryImage, countryName, _id } = visa;
   return (
-    <div className="card card-compact bg-base-100  shadow-xl">
+    <div className="card card-compact bg-base-100  shadow-xl border-2 border-gray-100 dark:bg-gray-700 dark:text-white">
       <figure>
         <img
           className="w-full h-44 object-cover"

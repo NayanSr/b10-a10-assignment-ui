@@ -1,13 +1,15 @@
-import ExtraSection1 from "../components/ExtraSection1";
 import ExtraSection2 from "../components/ExtraSection2";
 import LatestVisa from "../components/LatestVisa";
 import Banner from "../components/Banner";
 import { useLoaderData } from "react-router-dom";
+import DarkTheam from "../components/DarkTheam";
+import Success from "../components/Success";
+import Reviews from "../components/Reviews";
 
 const Home = () => {
     const loadedData= useLoaderData()
     return (
-        <div className="">
+        <div className=" mb-6">
           
            <Banner/>
            <div className='px-4'
@@ -15,6 +17,9 @@ const Home = () => {
             
            <LatestVisa  data={loadedData}/>
            </div>
+           <Success/>
+           <br />
+           <Reviews/>
            {/* <br />
            <ExtraSection1/>
            <br />

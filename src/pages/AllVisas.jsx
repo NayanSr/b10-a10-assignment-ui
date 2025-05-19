@@ -41,13 +41,13 @@ const AllVisas = () => {
     return (
         <div>
             {/* Enhanced Sorting Controls */}
-            <div className="flex flex-wrap justify-between items-center gap-4 my-4 px-4">
+            <div className=" flex flex-wrap justify-between items-center gap-4 my-4 px-4">
                 <h2 className="text-xl font-semibold">Sort By:</h2>
                 <div className="flex flex-wrap gap-2">
                     <select 
                         value={sortOption}
                         onChange={(e) => handleSort(e.target.value)}
-                        className="border rounded p-2 bg-white shadow-sm"
+                        className="border rounded p-2 bg-white shadow-sm dark:bg-gray-700 dark:text-white"
                     >
                         
                         
