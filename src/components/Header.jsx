@@ -75,24 +75,27 @@ const handleLogout=()=>{
           {links}
         </ul>
       </div>
-      <div className="navbar-end mr-4 text-xl text-yellow-600">
+      <div className="navbar-end mr-4 text-xl text-yellow-600 mr-2">
         {user ? (
-        <div className="flex items-center">
+        <div className="flex items-center ">
             <img className="w-8 h-8 rounded-full mr-4" src={user?.photoURL} alt={user?.displayName} />
             {/* <p>{user?.displayName}</p> */}
-            <button onClick={handleLogout} className="btn btn-success text-xl text-white">Logout</button>
+            <button onClick={handleLogout} className="btn btn-sm btn-success text-xl text-white ">Logout</button>
         </div>
         
         ) : (
         
-           <Link className="text-xl font-semibold text-teal-300 px-2 py-1 rounded-lg bg-orange-500" to="/login">
+           <Link className="text-xl font-semibold text-teal-300 px-2 py-[1.5px] rounded-lg bg-orange-500" to="/login">
             Login
           </Link>
         
         )}
 
-        <Link className="text-xl ml-4  font-semibold text-teal-300 px-2 py-1 rounded-lg bg-orange-500" to="/register">
+        <Link className="text-xl ml-4  font-semibold text-teal-300 px-2 py-[1.5px] rounded-lg bg-orange-500" to="/register">
           Register
+        </Link>
+        <Link className="text-xl ml-4  font-semibold text-teal-300 px-2 py-[1.5px] rounded-lg bg-orange-500" to="/dashboard/cart">
+          Dashboard
         </Link>
       </div>
     </div>

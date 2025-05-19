@@ -11,6 +11,8 @@ import MyAddedVisa from "../pages/MyAddedVisa";
 import UpdateVisa from "../components/UpdateVisa";
 import PrivateRoute from "../components/PrivateRoute";
 import Error from "../components/Error";
+import Dashboard from "../layouts/Dashboard";
+import Cart from "../pages/Dashboard/Cart";
 
 const router = createBrowserRouter([
   {
@@ -65,6 +67,15 @@ const router = createBrowserRouter([
      
     ],
   },
+  {
+    path:"dashboard",
+    element:<Dashboard/>,
+    children:[
+      {path:"cart", element:<Cart/>}
+    ]
+  },
+
+
   {path:'*', element:<Error/>}
 ]);
 

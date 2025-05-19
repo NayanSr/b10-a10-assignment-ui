@@ -44,7 +44,7 @@ const Modal = ({id}) => {
   };
 
   return (
-    <div>
+    <div className="mt-8">
       <dialog id="my_modal_5" className="modal modal-bottom sm:modal-middle">
         <div className="modal-box">
 {/* //!update form starts */}
@@ -191,7 +191,7 @@ const Modal = ({id}) => {
         {/*//! Submit Button */}
         <input
           type="submit"
-          value=" Submit"
+          value=" Submt"
           className="bg-blue-600 text-white px-6 py-2 rounded-md hover:bg-blue-700"
         />
       </form>

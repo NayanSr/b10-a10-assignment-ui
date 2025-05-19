@@ -109,21 +109,20 @@ const VisaDetails = () => {
         </div>
 
         {/* //! Modal starts */}
-        <div>
+        <div className="pt-16">
           {/* <button onClick={openModal}>Open Modal</button> */}
           <Modal
             isOpen={modalIsOpen}
             // onAfterOpen={afterOpenModal}
             onRequestClose={closeModal}
             contentLabel="Example Modal"
+           
           >
-            {/* <button onClick={closeModal}>close</button> */}
-            {/* <div>I am a modal</div> */}
-            <form onSubmit={handleSubmit}>
-              {/* <input /> */}
-              {/* <input type="text" name="name" id="" /> */}
+           <div className="mt-14">
+<form onSubmit={handleSubmit}>
+             
 
-              <label className="input input-bordered flex items-center gap-2">
+              <label className="input input-bordered flex items-center gap-2 ">
                 Email
                 <input type="text" className="grow" name="email"  defaultValue={email} />
               </label>
@@ -150,10 +149,12 @@ const VisaDetails = () => {
               </label>
 
               <div className="w-3/4 mx-auto flex justify-center mt-4">
-              <input className=" w-3/4 btn btn-success" type="submit" value="submit" />
+              <input className=" w-3/4 btn btn-success" type="submit" value="Submit" />
               </div>
 
             </form>
+           </div>
+            
           </Modal>
         </div>
         {/* //! Modal ends */}

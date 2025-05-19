@@ -15,7 +15,7 @@ const handleCancel=id=>{
     })
 }
   return (
-    <div>
+    <div className="px-4">
       <h2>Total Applied: {data?.length}</h2>
       <div className="grid grid-cols-1 md:grid-cols-3 my-4">
         {data.map((dt) => (
